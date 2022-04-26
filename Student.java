@@ -18,10 +18,12 @@ public class Student {
         return Name + " " + Integer.toString(Age) + " " + Date;
     }
 
-    public static Student Parse(String str) {
-        String[] data = str.split(" ");
-        if(data.length != 3)
-            return new Student("Parse Error", -1, "");
-        return new Student(data[0], Integer.parseInt(data[1]), data[2]);
-    }
+    public static Student Parse(String str) throws StudentParseError  {
+     
+      String[] data = str.split(" ");
+       
+      if(data.length != 3)
+      throw new StudentParseError();
+      return new Student(data[0], Integer.parseInt(data[1]), data[2]);
+      }
 }
