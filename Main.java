@@ -48,7 +48,7 @@ class Main {
         return name;
     } 
     public static int ReadAge() throws WrongStudentAge {
-        System.out.println("Podaj wiek: ");
+        System.out.println("Podaj wiek:  ");
         int age =  scan.nextInt();
         if(age<0 || age>100)
           throw new WrongStudentAge();
